@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./code_graper:/app/code_graper
+    environment:
+      - DJANGO_SETTINGS_MODULE=code_graper.settings
